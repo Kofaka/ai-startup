@@ -6,7 +6,7 @@
 
 ## Description
 
-This MR {does-something}
+This PR {does-something}
 
 Also, this PR includes the following:
 - {something}
