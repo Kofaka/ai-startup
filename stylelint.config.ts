@@ -10,6 +10,7 @@ const config: Config = {
     'no-empty-source': null,
     'color-no-invalid-hex': true,
     'selector-class-pattern': null,
+    'color-hex-length': 'long',
     'at-rule-no-unknown': [
       true,
       {
