@@ -1,0 +1,98 @@
+.root {
+  @apply relative h-fit flex flex-row items-center justify-center gap-4;
+  @apply transition-all duration-200 ease-in-out;
+  @apply cursor-pointer;
+  @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+
+  &:disabled {
+    @apply cursor-not-allowed opacity-50;
+  }
+
+  &:not(:disabled) {
+    @apply hover:bg-opacity-90;
+
+    &:not(.fullWidth) {
+      @apply hover:scale-105;
+    }
+  }
+
+  &.dark {
+    @apply bg-[#3D3D3D] bg-opacity-60;
+    @apply border border-white border-opacity-30;
+    @apply shadow-innerWhiteLg;
+    @apply backdrop-filter backdrop-blur-lg;
+
+    &:not(:disabled) {
+      @apply hover:shadow-innerWhiteOuterVioletLg;
+    }
+  }
+
+  &.purple {
+    @apply bg-brand-300 bg-opacity-40;
+    @apply border border-white border-opacity-30;
+    @apply shadow-innerWhiteLg;
+    @apply backdrop-filter backdrop-blur-lg;
+
+
+    &:not(:disabled) {
+      @apply hover:shadow-innerWhiteOuterVioletLg;
+    }
+  }
+
+  &.white {
+    @apply bg-white text-black;
+
+    &:not(:disabled) {
+      @apply hover:shadow-outerVioletLg;
+    }
+  }
+
+  &.small {
+    @apply rounded-lg;
+    @apply px-[16px] py-[1px];
+
+    .content {
+      @apply font-normal text-[14px]/[26px];
+    }
+  }
+
+  &.medium {
+    @apply rounded-[10px];
+    @apply px-[16px] py-[5px];
+
+    .content {
+      @apply font-normal text-[14px]/[26px];
+    }
+  }
+
+  &.large {
+    @apply rounded-xl;
+    @apply px-[16px] py-[4px];
+
+    .content {
+      @apply font-medium text-[15px]/[31px];
+    }
+  }
+
+  &.fullWidth {
+    @apply w-full;
+  }
+
+  &.outerBorder {
+    @apply m-[0.625rem];
+
+    &::before {
+      @apply absolute -inset-2.5 border border-white rounded-xl opacity-10 pointer-events-none;
+
+      content: "";
+    }
+  }
+
+  &.loading {
+    @apply cursor-not-allowed;
+  }
+}
+
+.content {
+  @apply font-inter -tracking-[0.25];
+}
