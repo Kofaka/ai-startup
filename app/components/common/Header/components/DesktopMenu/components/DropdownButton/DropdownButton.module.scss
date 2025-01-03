@@ -1,0 +1,54 @@
+.root {
+  @apply relative inline-block text-left;
+}
+
+.button {
+  @apply flex flex-row justify-between items-center gap-[3px];
+
+  &.open {
+    @apply text-opacity-100;
+    @apply shadow-md;
+
+    .buttonIcon {
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+.buttonIcon {
+  @apply transition-all duration-150 ease-in-out;
+}
+
+.menu {
+  @apply absolute left-0 mt-3 p-2 w-auto min-w-full;
+  @apply bg-[url('/stars-glow.png')] bg-black bg-cover bg-top bg-no-repeat;
+  @apply rounded-md;
+  @apply shadow-lg ring-1 ring-brand-300/50;
+  @apply shadow-lg shadow-brand-300/35;
+  @apply origin-top-right;
+  @apply transition ease-in duration-75;
+  @apply transform opacity-100 scale-100;
+  @apply transform opacity-0 scale-95;
+  @apply z-[-1];
+  @apply focus:outline-none;
+
+  &.open {
+    @apply transition ease-out duration-100;
+    @apply transform opacity-0 scale-95;
+    @apply transform opacity-100 scale-100;
+    @apply z-10;
+  }
+}
+
+.menuItem {
+  @apply font-normal text-[13px]/[26px] text-white text-opacity-80 whitespace-nowrap;
+  @apply cursor-pointer;
+  @apply transition-all duration-200 ease-in-out;
+  @apply hover:text-opacity-100;
+  @apply hover:shadow-md;
+
+  &.active {
+    @apply font-bold text-opacity-100;
+    @apply shadow-md;
+  }
+}
