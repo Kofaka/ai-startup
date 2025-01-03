@@ -23,6 +23,10 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'tablet': '810px',
+        'desktop': '1200px',
+      },
       fontFamily: {
         inter: ['var(--font-inter)'],
       },

@@ -1,0 +1,21 @@
+.root {
+  @apply py-[13px] px-[17px] w-screen;
+  @apply border-0 border-b border-white border-opacity-15;
+}
+
+.wrapper {
+  @apply mx-auto w-full;
+  @apply flex flex-row justify-between items-center gap-[20px];
+  @apply transition-all duration-200 ease-in-out;
+  @apply tablet:gap-[34px] tablet:w-fit;
+  @apply desktop:gap-[74px];
+}
+
+.logo {
+  @apply w-[38px] h-[38px];
+}
+
+.rightMenuWrapper {
+  @apply flex flex-row justify-between items-center gap-[10px];
+  @apply transition-all duration-200 ease-in-out;
+}

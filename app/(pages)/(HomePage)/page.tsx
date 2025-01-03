@@ -3,7 +3,7 @@ import styles from './HomePage.module.scss';
 
 export default function Home() {
   return (
-    <main className={styles.root}>
+    <div className={styles.root}>
       <h1 className={styles.title}>Boost your rankings with AI.</h1>
 
       <p className={styles.description}>
@@ -16,6 +16,6 @@ export default function Home() {
           Start for free
         </button>
       </div>
-    </main>
+    </div>
   );
 }

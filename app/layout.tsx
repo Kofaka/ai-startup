@@ -1,6 +1,8 @@
 import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+// Components
+import { Header } from '@/app/components/common';
 // Styles
 import '@/app/styles/global.scss';
 
@@ -45,7 +47,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.variable}>
-        {children}
+        <Header />
+        <main className="h-[calc(100vh-77px)]">
+          {children}
+        </main>
       </body>
     </html>
   );
