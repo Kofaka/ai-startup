@@ -11,6 +11,20 @@ export const ROUTES = {
   CONTACT: '/contact',
   BLOG: '/blog',
   CHANGELOG: '/changelog',
-}
+  EXAMPLES: '/examples',
+  COMMUNITY: '/community',
+  GUIDES: '/guides',
+  DOCS: '/docs',
+  PRESS: '/press',
+  PRIVACY: '/privacy',
+  TERMS: '/terms',
+  SECURITY: '/security',
+  CONTRACT: '/contract',
+  FAQ: '/faq',
+  MANIFESTO: '/manifesto',
+  PRICING: '/pricing',
+  UPDATES: '/updates',
+  INTEGRATION: '/integration',
+};
 
 export type RouteName = (typeof ROUTES)[keyof typeof ROUTES];

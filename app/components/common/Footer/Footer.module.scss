@@ -1,0 +1,67 @@
+.root {
+  @apply px-[45px] py-[41px];
+  @apply flex flex-row flex-wrap justify-between items-center gap-x-2 gap-y-[30px];
+
+  box-shadow:
+    -50px -64px 140px rgb(0 0 0 / 50%),
+    -20px -64px 140px rgb(0 0 0 / 90%),
+    50px -64px 140px rgb(0 0 0 / 50%);
+
+  @media screen and (width >= 810px) {
+    @apply grid items-start gap-[30px];
+
+    grid-template-areas:
+      "homeLink internalLinksList"
+      "socialLinksList socialLinksList";
+  }
+}
+
+.homeLinkWrapper {
+  grid-area: homeLink;
+}
+
+.homeLinkLogo {
+  @apply w-[127px] h-[35px];
+  @apply desktop:w-[138px] desktop:h-[38px];
+}
+
+.socialLinksList {
+  @apply flex flex-row justify-start items-start gap-[30px];
+
+  grid-area: socialLinksList;
+}
+
+.socialLinksListItem {
+  @apply text-white/40;
+  @apply transition-all duration-200 ease-in-out;
+  @apply hover:text-white
+}
+
+.socialLinksListItemIcon {
+  @apply w-auto h-6;
+}
+
+.internalLinksList {
+  @apply flex flex-wrap flex-row justify-start items-start gap-[60px];
+
+  grid-area: internalLinksList;
+}
+
+.internalLinksListItem {
+  @apply flex flex-col justify-stretch items-start gap-[20px];
+}
+
+
+.internalLinksListItemTitle {
+  @apply font-[500] text-[13px]/[26px] text-white;
+}
+
+.internalLinksListItemLinksList {
+  @apply flex flex-col justify-stretch items-start gap-[20px];
+}
+
+.internalLinksListItemLinksListItem {
+  @apply font-[400] text-[13px]/[26px] text-white/50;
+  @apply transition-all duration-200 ease-in-out;
+  @apply hover:text-white hover:underline;
+}
