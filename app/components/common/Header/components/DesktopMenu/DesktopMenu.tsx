@@ -55,6 +55,7 @@ export const DesktopMenu = ({ items }: DesktopMenuProps) => {
               })}
               href={href}
               title={`Go to ${label} page`}
+              aria-label={`Link to ${label} page`}
             >
               {label}
             </Link>

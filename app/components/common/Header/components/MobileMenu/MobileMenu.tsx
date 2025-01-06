@@ -44,7 +44,7 @@ export const MobileMenu = ({ items }: MobileMenuProps) => {
       })}
       onClick={handleMenuToggle}
     >
-      <MenuIcon viewBox="0 0 32 32" />
+      <MenuIcon viewBox="0 0 32 32" aria-hidden={true}/>
     </button>
 
     <ul className={clsx(styles.menu, {
@@ -59,15 +59,24 @@ export const MobileMenu = ({ items }: MobileMenuProps) => {
               })}
               href={href}
               title={`Go to ${label} page`}
+              aria-label={`Link to ${label} page`}
             >
-              <StartIcon viewBox="0 0 24 24" className={styles.menuItemIcon} />
+              <StartIcon
+                className={styles.menuItemIcon}
+                viewBox="0 0 24 24"
+                aria-hidden={true}
+              />
 
               {label}
             </Link>
           ) : (
             <>
               <span className={clsx(styles.menuItem, styles.withSubitems)}>
-                <StartIcon viewBox="0 0 24 24" className={styles.menuItemIcon} />
+                <StartIcon
+                  className={styles.menuItemIcon}
+                  viewBox="0 0 24 24"
+                  aria-hidden={true}
+                />
 
                 {label}
               </span>
@@ -81,8 +90,13 @@ export const MobileMenu = ({ items }: MobileMenuProps) => {
                       })}
                       href={href}
                       title={`Go to ${label} page`}
+                      aria-label={`Link to ${label} page`}
                     >
-                      <RocketIcon viewBox="0 0 25 25" className={styles.menuItemIcon} />
+                      <RocketIcon
+                        className={styles.menuItemIcon}
+                        viewBox="0 0 25 25"
+                        aria-hidden={true}
+                      />
 
                       {label}
                     </Link>

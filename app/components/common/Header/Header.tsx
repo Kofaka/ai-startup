@@ -11,8 +11,8 @@ import { Button, ButtonColor, UIComponentSize } from '@/app/ui';
 import LogoImage from '@/app/components/common/Header/logo.png';
 // Components
 import {
-  DesktopMenu,
   MobileMenu,
+  DesktopMenu,
 } from '@/app/components/common/Header/components';
 import { NavItem } from '@/app/components/common/Header/types';
 // Styles
@@ -78,7 +78,11 @@ export const Header = ({ className }: HeaderProps) => {
 
   return <header className={clsx(styles.root, className)}>
     <div className={styles.wrapper}>
-      <Link href={ROUTES.HOME} title="Go Home">
+      <Link
+        href={ROUTES.HOME}
+        title="Go Home"
+        aria-label="Home link"
+      >
         <Image
           className={styles.logo}
           src={LogoImage}
