@@ -1,10 +1,12 @@
 import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import clsx from 'clsx';
 // Components
 import { Header } from '@/app/components/common';
 // Styles
 import '@/app/styles/global.scss';
+import styles from '@/app/layout.module.scss';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -46,12 +48,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.variable}>
-        <Header />
-        <main className="h-[calc(100vh-77px)]">
-          {children}
-        </main>
-      </body>
+    <body className={clsx(inter.variable, styles.root)}>
+      <Header className={styles.header}/>
+
+      <main className={styles.content}>{children}</main>
+    </body>
     </html>
   );
 }

@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import clsx from 'clsx';
 // Constants
 import { ROUTES } from '@/app/constants';
 // Ui
@@ -66,14 +67,18 @@ const navItems: NavItem[] = [
   },
 ];
 
-export const Header = () => {
+type HeaderProps = {
+  className?: string;
+};
+
+export const Header = ({ className }: HeaderProps) => {
   const handleJoinWaitlistCtaClick = () => {
     console.log('Join waitlist clicked');
   }
 
-  return <header className={styles.root}>
+  return <header className={clsx(styles.root, className)}>
     <div className={styles.wrapper}>
-      <Link href='/' title="Go Home">
+      <Link href={ROUTES.HOME} title="Go Home">
         <Image
           className={styles.logo}
           src={LogoImage}
