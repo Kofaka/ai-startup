@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import clsx from 'clsx';
 // Components
-import { Header } from '@/app/components/common';
+import { Header, Footer } from '@/app/components/common';
 // Styles
 import '@/app/styles/global.scss';
 import styles from '@/app/layout.module.scss';
@@ -52,6 +52,8 @@ export default function RootLayout({
       <Header className={styles.header}/>
 
       <main className={styles.content}>{children}</main>
+
+      <Footer className={styles.footer}/>
     </body>
     </html>
   );

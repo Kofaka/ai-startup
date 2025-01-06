@@ -2,7 +2,7 @@
   @apply grid grid-cols-1 min-h-screen;
 
   // 77px is the height of the header
-  grid-template-rows: auto minmax(calc(100vh - 77px), 1fr);
+  grid-template-rows: auto minmax(calc(100vh - 77px), 1fr) auto;
 }
 
 .header {
@@ -10,5 +10,9 @@
 }
 
 .content {
+  @apply w-full;
+}
+
+.footer {
   @apply w-full;
 }
