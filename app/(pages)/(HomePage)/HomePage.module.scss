@@ -1,6 +1,6 @@
 .root {
-  @apply h-screen flex flex-col justify-center items-center gap-4;
-  @apply bg-[url('../public/heroshot-bg-image.png')] bg-black bg-cover bg-top bg-no-repeat;
+  @apply p-12 h-full flex flex-col justify-start items-center gap-4 overflow-auto;
+  @apply bg-[url('/heroshot-bg-image.png')] bg-black bg-cover bg-top bg-no-repeat;
 }
 
 .title {

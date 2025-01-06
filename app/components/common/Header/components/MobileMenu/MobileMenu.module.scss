@@ -1,0 +1,80 @@
+.root {
+  @apply flex justify-center items-center;
+  @apply tablet:hidden;
+  @apply overflow-hidden;
+}
+
+.button {
+  @apply p-[7px];
+  @apply rounded-[10px];
+  @apply bg-transparent;
+  @apply border border-white border-opacity-0;
+  @apply text-white;
+  @apply cursor-pointer;
+  @apply transition-all duration-300 ease-in-out;
+  @apply hover:scale-[0.65] hover:bg-brand-400/75 hover:border-opacity-10;
+  @apply hover:shadow-lg hover:shadow-brand-300/60;
+
+  &.open {
+    @apply bg-brand-300 border-opacity-10;
+    @apply scale-[0.65];
+    @apply shadow-lg shadow-brand-300/60;
+  }
+}
+
+.menu {
+  @apply absolute inset-0 py-4 px-[17px] mt-[77px] w-screen;
+  // stylelint-disable-next-line
+  @apply h-[calc(100vh-77px)];
+  @apply flex flex-col justify-start items-stretch gap-3;
+  @apply bg-[url('/stars-glow.png')] bg-black bg-cover bg-top bg-no-repeat;
+  @apply shadow-lg ring-1 ring-brand-300/50;
+  @apply shadow-lg shadow-brand-300/35;
+  @apply origin-top-right;
+  @apply transition ease-in duration-75;
+  @apply transform opacity-100 scale-100;
+  @apply transform opacity-0 scale-95;
+  @apply overflow-scroll;
+  @apply z-[-1];
+  @apply focus:outline-none;
+
+  &.open {
+    @apply transition ease-out duration-100;
+    @apply transform opacity-0 scale-95;
+    @apply transform opacity-100 scale-100;
+    @apply z-10;
+  }
+}
+
+.menuItem {
+  @apply relative ml-[10px];
+  @apply flex flex-row items-center gap-1;
+  @apply font-normal text-[18px]/[32px] text-white text-opacity-80 whitespace-nowrap;
+  @apply tablet:text-[13px]/[26px];
+  @apply transition-all duration-200 ease-in-out;
+  @apply cursor-pointer;
+
+  &.active,
+  &:hover {
+    @apply font-bold text-opacity-100;
+
+    .menuItemIcon {
+      @apply text-[20px]/[34px];
+      @apply tablet:text-[15px]/[30px];
+    }
+  }
+
+  &.withSubitems {
+    @apply cursor-default pointer-events-none;
+  }
+}
+
+.menuItemIcon {
+  @apply w-[1em] h-[1em];
+  @apply text-brand-300;
+}
+
+.menuSubitemsList {
+  @apply ml-4 mb-2;
+  @apply flex flex-col gap-2;
+}

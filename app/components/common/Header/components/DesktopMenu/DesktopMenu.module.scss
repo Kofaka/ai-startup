@@ -1,0 +1,23 @@
+.root {
+  @apply py-2 px-10;
+  @apply hidden;
+  @apply tablet:flex flex-row justify-center items-center;
+  @apply border border-white border-opacity-15 rounded-[60px];
+}
+
+.menu {
+  @apply flex flex-row justify-start items-center gap-[30px];
+}
+
+.menuItem {
+  @apply font-normal text-[13px]/[26px] text-white text-opacity-60;
+  @apply cursor-pointer;
+  @apply transition-all duration-200 ease-in-out;
+  @apply hover:text-opacity-100;
+  @apply hover:shadow-md;
+
+  &.active {
+    @apply font-medium text-opacity-100;
+    @apply shadow-md;
+  }
+}

@@ -1,0 +1,31 @@
+.root {
+  @apply flex justify-center items-center;
+
+  &.fullScreen {
+    @apply absolute inset-0 w-screen h-screen overflow-hidden bg-gray-900 bg-opacity-50;
+  }
+}
+
+.icon {
+  @apply animate-spin;
+
+  &.small {
+    @apply w-4 h-4;
+  }
+
+  &.medium {
+    @apply w-5 h-5;
+  }
+
+  &.large {
+    @apply w-6 h-6;
+  }
+
+  &.extraLarge {
+    @apply w-12 h-12;
+  }
+
+  &.ultraLarge {
+    @apply w-28 h-28;
+  }
+}
