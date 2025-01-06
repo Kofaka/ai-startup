@@ -37,7 +37,11 @@ export const DropdownButton = ({
     >
       <span>{label}</span>
 
-      <ArrowIcon className={styles.buttonIcon} viewBox="0 0 14 14"/>
+      <ArrowIcon
+        className={styles.buttonIcon}
+        viewBox="0 0 14 14"
+        aria-hidden={true}
+      />
     </button>);
 
   const [hoverToggleButton, hovered] = useHover(toggleButton);
@@ -64,6 +68,7 @@ export const DropdownButton = ({
               })}
               href={href}
               title={`Go to ${label} page`}
+              aria-label={`Link to ${label} page`}
             >
               {label}
             </Link>
