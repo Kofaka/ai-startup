@@ -41,38 +41,40 @@ export const DesktopMenu = ({ items }: DesktopMenuProps) => {
     setOpenDropdown(openDropdown === label ? null : label);
   };
 
-  return <nav className={styles.root}>
-    <ul
-      ref={ref}
-      className={styles.menu}
-    >
-      {items.map(({ label, href, subItems }) => (
-        <li key={label}>
-          {href ? (
-            <Link
-              className={clsx(styles.menuItem, {
-                [styles.active]: pathname === href,
-              })}
-              href={href}
-              title={`Go to ${label} page`}
-              aria-label={`Link to ${label} page`}
-            >
-              {label}
-            </Link>
-          ) : (
-            <DropdownButton
-              className={styles.menuItem}
-              isOpen={openDropdown === label}
-              action={() => handleDropdownClick(label)}
-              label={label}
-              items={subItems || []}
-              activeItem={pathname}
-            />
-          )}
-        </li>
-      ))}
-    </ul>
-  </nav>;
+  return (
+    <nav className={styles.root}>
+      <ul
+        ref={ref}
+        className={styles.menu}
+      >
+        {items.map(({ label, href, subItems }) => (
+          <li key={label}>
+            {href ? (
+              <Link
+                className={clsx(styles.menuItem, {
+                  [styles.active]: pathname === href,
+                })}
+                href={href}
+                title={`Go to ${label} page`}
+                aria-label={`Link to ${label} page`}
+              >
+                {label}
+              </Link>
+            ) : (
+              <DropdownButton
+                className={styles.menuItem}
+                isOpen={openDropdown === label}
+                action={() => handleDropdownClick(label)}
+                label={label}
+                items={subItems || []}
+                activeItem={pathname}
+              />
+            )}
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
 };
 
 export default DesktopMenu;
