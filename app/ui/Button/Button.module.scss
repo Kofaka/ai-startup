@@ -17,7 +17,7 @@
   }
 
   &.dark {
-    @apply bg-[#3D3D3D] bg-opacity-60;
+    @apply bg-[#3d3d3d] bg-opacity-60;
     @apply border border-white border-opacity-30;
     @apply shadow-innerWhiteLg;
     @apply backdrop-filter backdrop-blur-lg;
@@ -66,7 +66,7 @@
   }
 
   &.large {
-    @apply rounded-xl;
+    @apply rounded-lg;
     @apply px-[16px] py-[4px];
 
     .content {
@@ -85,6 +85,30 @@
       @apply absolute -inset-2.5 border border-white rounded-xl opacity-10 pointer-events-none;
 
       content: "";
+    }
+
+    &.small {
+      @apply m-[6px];
+
+      &::before {
+        @apply -inset-[7px];
+      }
+    }
+
+    &.medium {
+      @apply m-[0.625rem];
+
+      &::before {
+        @apply -inset-2.5;
+      }
+    }
+
+    &.large {
+      @apply m-[0.625rem];
+
+      &::before {
+        @apply -inset-2.5;
+      }
     }
   }
 
