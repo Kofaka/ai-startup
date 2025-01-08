@@ -1,0 +1,66 @@
+.root {
+  @apply pt-[90px] px-[15px] pb-0 h-full;
+  @apply flex flex-col justify-between items-center gap-0;
+  @apply bg-[url('./heroshot-bg-image_mobile.png')] bg-black bg-contain bg-bottom bg-no-repeat;
+  @apply tablet:px-[65px];
+  @apply tablet:bg-[url('./heroshot-bg-image_tablet.png')] tablet:bg-cover;
+  @apply desktop:px-[40px];
+  @apply desktop:bg-[url('./heroshot-bg-image_desktop.png')];
+
+  @media screen and (width >= 810px) {
+    box-shadow: inset 0 7px 70px rgb(0 0 0 / 50%), inset 0 -90px 80px rgb(0 0 0 / 50%);
+  }
+}
+
+.badge {
+  @apply mx-auto mb-2 p-[7px_14px] w-fit;
+  @apply flex flex-row justify-start items-center gap-[7px];
+  @apply bg-black border border-white/15 rounded-[50px];
+}
+
+.badgeType {
+  @apply w-[34px] h-[18px];
+  @apply flex justify-center items-center;
+  @apply bg-brand-400 rounded-[40px];
+  @apply font-bold text-[10px]/[18px] text-black not-italic ;
+}
+
+.badgeLabel {
+  @apply font-normal text-[20px]/[31px] text-brand-400;
+}
+
+.infoWrapper {
+  @apply mx-auto mb-[54px] w-full max-w-[586px];
+  @apply flex flex-col justify-between items-center gap-4;
+  @apply tablet:mb-9;
+  @apply desktop:mb-8;
+}
+
+.infoTitle {
+  @apply pb-[2px];
+  @apply font-medium text-[48px]/[52px] -tracking-[0.0506em] text-center text-transparent;
+  @apply bg-gradient-to-b from-white to-brand-200 bg-clip-text;
+  @apply tablet:pb-[6px] tablet:text-[82px]/[84px];
+}
+
+.infoDescription {
+  @apply max-w-[544px];
+  @apply font-normal text-[18px]/[28px] -tracking-[0.0001em] text-center text-white;
+  @apply tablet:text-[20px]/[31px];
+}
+
+.illustrationWrapper {
+  @apply mx-auto w-full max-w-[1200px] h-auto;
+  @apply rounded-[11px_11px_0_0];
+  @apply overflow-hidden;
+  @apply tablet:h-[308px];
+  @apply desktop:h-[668px];
+  @apply desktop:rounded-[32px_32px_0_0];
+
+  filter: drop-shadow(0 -20px 70px rgb(140 69 255 / 25%)) drop-shadow(0 -19px 70px rgb(140 69 255 / 40%));
+}
+
+.illustration {
+  @apply w-full h-auto;
+  @apply rounded-[11px];
+}
