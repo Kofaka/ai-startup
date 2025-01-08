@@ -100,7 +100,7 @@ export const Header = ({ className }: HeaderProps) => {
             onClick={handleJoinWaitlistCtaClick}
             size={UIComponentSize.Small}
             color={ButtonColor.Purple}
-            outerBorder
+            outerBorderBold
           >
             Join waitlist
           </Button>

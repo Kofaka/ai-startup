@@ -1,6 +1,7 @@
 .root {
-  @apply py-[13px] px-[17px] w-screen;
+  @apply p-[14px_14px_13px_19px] w-screen;
   @apply border-0 border-b border-white border-opacity-15;
+  @apply tablet:p-[12px_17px_13px];
 }
 
 .wrapper {
@@ -16,6 +17,7 @@
 }
 
 .rightMenuWrapper {
-  @apply flex flex-row justify-between items-center gap-[10px];
+  @apply flex flex-row justify-between items-center gap-[4px];
   @apply transition-all duration-200 ease-in-out;
+  @apply tablet:gap-[10px];
 }
