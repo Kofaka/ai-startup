@@ -12,6 +12,12 @@
   @apply desktop:gap-[74px];
 }
 
+.logoWrapper {
+  @apply flex justify-center items-center;
+  @apply rounded-[9px];
+  @apply overflow-hidden;
+}
+
 .logo {
   @apply w-[38px] h-[38px];
 }
