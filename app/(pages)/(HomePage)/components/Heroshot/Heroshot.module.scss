@@ -3,13 +3,11 @@
   @apply flex flex-col justify-between items-center gap-0;
   @apply bg-[url('./heroshot-bg-image_mobile.png')] bg-black bg-contain bg-bottom bg-no-repeat;
   @apply tablet:px-[65px];
-  @apply tablet:bg-[url('./heroshot-bg-image_tablet.png')] tablet:bg-cover;
+  @apply tablet:bg-[url('./heroshot-bg-image_tablet.png')] tablet:bg-cover tablet:bg-top;
   @apply desktop:px-[40px];
   @apply desktop:bg-[url('./heroshot-bg-image_desktop.png')];
 
-  @media screen and (width >= 810px) {
-    box-shadow: inset 0 7px 70px rgb(0 0 0 / 50%), inset 0 -90px 80px rgb(0 0 0 / 50%);
-  }
+  mask: linear-gradient(0deg, rgb(0 0 0 / 0%) 3.8%, #050208 21.74%);
 }
 
 .badge {
@@ -50,17 +48,36 @@
 }
 
 .illustrationWrapper {
-  @apply mx-auto w-full max-w-[1200px] h-auto;
-  @apply rounded-[11px_11px_0_0];
+  @apply mx-auto p-[2.5px];
+  @apply w-full max-w-[1200px] h-auto;
+  @apply border border-white/10 rounded-[10px];
+
+  background: #0b0614 linear-gradient(270deg, #0d0718 0%, rgb(15 8 27 / 0%) 47.85%, #0b0614 100%);
+  filter: drop-shadow(0 -20px 70px rgb(140 69 255 / 25%)) drop-shadow(0 -19px 70px rgb(140 69 255 / 40%));
+
+  @media screen and (width >= 810px) {
+    filter: drop-shadow(0 -20px 70px rgb(140 69 255 / 12.5%)) drop-shadow(0 -19px 70px rgb(140 69 255 / 20%));
+  }
+}
+
+.illustrationFilterWrapper {
+  @apply border border-white/10 rounded-[8px];
+
+  filter: drop-shadow(0 -20px 70px rgb(140 69 255 / 12.5%)) drop-shadow(0 -19px 70px rgb(140 69 255 / 20%));
+
+  @media screen and (width >= 810px) {
+    filter: drop-shadow(0 -20px 70px rgb(140 69 255 / 25%)) drop-shadow(0 -19px 70px rgb(140 69 255 / 40%));
+  }
+}
+
+.illustrationContainer {
+  @apply h-auto min-h-[308px];
+  @apply bg-[#050208] rounded-[10px];
   @apply overflow-hidden;
   @apply tablet:h-[308px];
   @apply desktop:h-[668px];
-  @apply desktop:rounded-[32px_32px_0_0];
-
-  filter: drop-shadow(0 -20px 70px rgb(140 69 255 / 25%)) drop-shadow(0 -19px 70px rgb(140 69 255 / 40%));
 }
 
 .illustration {
-  @apply w-full h-auto;
-  @apply rounded-[11px];
+  mask: linear-gradient(0deg, rgb(0 0 0 / 0%) 3.8%, #050208 86.04%);
 }

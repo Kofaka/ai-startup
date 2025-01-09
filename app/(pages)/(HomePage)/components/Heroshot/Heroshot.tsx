@@ -43,13 +43,17 @@ export const Heroshot = () => {
       </div>
 
       <div className={styles.illustrationWrapper}>
-        <Image
-          className={styles.illustration}
-          src={HeroshotIllustration}
-          alt="Heroshot illustration"
-          aria-hidden={true}
-          loading="lazy"
-        />
+        <div className={styles.illustrationFilterWrapper}>
+          <div className={styles.illustrationContainer}>
+            <Image
+              className={styles.illustration}
+              src={HeroshotIllustration}
+              alt="Heroshot illustration"
+              aria-hidden={true}
+              loading="lazy"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
