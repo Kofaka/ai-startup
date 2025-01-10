@@ -1,0 +1,25 @@
+.root {
+  @apply p-[40px_24px];
+  @apply flex flex-col justify-start items-center gap-[40px];
+}
+
+.title {
+  @apply font-normal text-[16px]/[26px] -tracking-[0.0001em] text-center text-white/70;
+}
+
+.list {
+  @apply mx-auto;
+  @apply grid grid-cols-2 gap-[10px];
+  @apply tablet:grid-cols-4;
+}
+
+.listItemWrapper {
+  @apply p-[32px_10px];
+  @apply flex flex-col justify-center items-center gap-0;
+  @apply list-none border border-white/15 rounded-[10px] box-border;
+  @apply desktop:p-[32px_40px];
+}
+
+.listItem {
+  @apply w-full max-w-[155px] h-auto;
+}
