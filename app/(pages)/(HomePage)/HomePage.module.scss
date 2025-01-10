@@ -1,34 +1,5 @@
 .root {
-  @apply p-12 h-full flex flex-col justify-start items-center gap-4 overflow-auto;
-  @apply bg-[url('/heroshot-bg-image.png')] bg-black bg-cover bg-top bg-no-repeat;
-}
-
-.title {
-  @apply mx-auto max-w-[586px];
-  @apply bg-gradient-to-b from-white to-brand-200 bg-clip-text;
-  @apply font-medium text-[82px]/[1.15] tracking-tighter text-center text-transparent;
-}
-
-.description {
-  @apply mx-auto pb-2 max-w-[544px];
-  @apply font-normal text-[20px]/[31px] text-center text-white;
-}
-
-.ctaWrapper {
-  @apply flex justify-center gap-4;
-}
-
-.cta {
-  @apply relative p-[9px_16px] bg-white;
-  @apply font-medium text-[15px] -tracking-[0.25] text-black ;
-  @apply rounded-lg shadow-lg cursor-pointer;
-  @apply transition-transform duration-200 ease-in-out;
-  @apply hover:scale-105 hover:shadow-xl;
-  @apply focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-brand-300;
-
-  &::before {
-    @apply absolute -inset-2.5 border border-white rounded-xl opacity-10 pointer-events-none;
-
-    content: "";
-  }
+  @apply p-0 h-full;
+  @apply flex flex-col justify-stretch items-stretch gap-0;
+  @apply overflow-auto;
 }

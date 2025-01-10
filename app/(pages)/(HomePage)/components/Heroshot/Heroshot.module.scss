@@ -1,0 +1,83 @@
+.root {
+  @apply pt-[90px] px-[15px] pb-0 h-full;
+  @apply flex flex-col justify-between items-center gap-0;
+  @apply bg-[url('./heroshot-bg-image_mobile.png')] bg-black bg-contain bg-bottom bg-no-repeat;
+  @apply tablet:px-[65px];
+  @apply tablet:bg-[url('./heroshot-bg-image_tablet.png')] tablet:bg-cover tablet:bg-top;
+  @apply desktop:px-[40px];
+  @apply desktop:bg-[url('./heroshot-bg-image_desktop.png')];
+
+  mask: linear-gradient(0deg, rgb(0 0 0 / 0%) 3.8%, #050208 21.74%);
+}
+
+.badge {
+  @apply mx-auto mb-2 p-[7px_14px] w-fit;
+  @apply flex flex-row justify-start items-center gap-[7px];
+  @apply bg-black border border-white/15 rounded-[50px];
+}
+
+.badgeType {
+  @apply w-[34px] h-[18px];
+  @apply flex justify-center items-center;
+  @apply bg-brand-400 rounded-[40px];
+  @apply font-bold text-[10px]/[18px] text-black not-italic ;
+}
+
+.badgeLabel {
+  @apply font-normal text-[20px]/[31px] text-brand-400;
+}
+
+.infoWrapper {
+  @apply mx-auto mb-[54px] w-full max-w-[586px];
+  @apply flex flex-col justify-between items-center gap-4;
+  @apply tablet:mb-9;
+  @apply desktop:mb-8;
+}
+
+.infoTitle {
+  @apply pb-[2px];
+  @apply font-medium text-[48px]/[52px] -tracking-[0.0506em] text-center text-transparent;
+  @apply bg-gradient-to-b from-white to-brand-200 bg-clip-text;
+  @apply tablet:pb-[6px] tablet:text-[82px]/[84px];
+}
+
+.infoDescription {
+  @apply max-w-[544px];
+  @apply font-normal text-[18px]/[28px] -tracking-[0.0001em] text-center text-white;
+  @apply tablet:text-[20px]/[31px];
+}
+
+.illustrationWrapper {
+  @apply mx-auto p-[2.5px];
+  @apply w-full max-w-[1200px] h-auto;
+  @apply border border-white/10 rounded-[10px];
+
+  background: #0b0614 linear-gradient(270deg, #0d0718 0%, rgb(15 8 27 / 0%) 47.85%, #0b0614 100%);
+  filter: drop-shadow(0 -20px 70px rgb(140 69 255 / 25%)) drop-shadow(0 -19px 70px rgb(140 69 255 / 40%));
+
+  @media screen and (width >= 810px) {
+    filter: drop-shadow(0 -20px 70px rgb(140 69 255 / 12.5%)) drop-shadow(0 -19px 70px rgb(140 69 255 / 20%));
+  }
+}
+
+.illustrationFilterWrapper {
+  @apply border border-white/10 rounded-[8px];
+
+  filter: drop-shadow(0 -20px 70px rgb(140 69 255 / 12.5%)) drop-shadow(0 -19px 70px rgb(140 69 255 / 20%));
+
+  @media screen and (width >= 810px) {
+    filter: drop-shadow(0 -20px 70px rgb(140 69 255 / 25%)) drop-shadow(0 -19px 70px rgb(140 69 255 / 40%));
+  }
+}
+
+.illustrationContainer {
+  @apply h-auto min-h-[308px];
+  @apply bg-[#050208] rounded-[10px];
+  @apply overflow-hidden;
+  @apply tablet:h-[308px];
+  @apply desktop:h-[668px];
+}
+
+.illustration {
+  mask: linear-gradient(0deg, rgb(0 0 0 / 0%) 3.8%, #050208 86.04%);
+}
