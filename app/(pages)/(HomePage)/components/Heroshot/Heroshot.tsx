@@ -6,7 +6,7 @@ import {
   UIComponentSize,
 } from '@/app/ui';
 // Images
-import HeroshotIllustration from '@/app/(pages)/(HomePage)/components/Heroshot/heroshot-illustration.png';
+import HeroshotIllustration from '@/app/(pages)/(HomePage)/components/Heroshot/images/heroshot-illustration.png';
 // Styles
 import styles from './Heroshot.module.scss';
 

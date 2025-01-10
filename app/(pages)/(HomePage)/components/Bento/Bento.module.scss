@@ -1,0 +1,68 @@
+.root {
+  @apply mx-auto p-[80px_15px] w-full max-w-[1200px];
+  @apply flex flex-col justify-start items-center gap-[30px];
+  @apply tablet:px-[33px];
+  @apply desktop:px-[50px];
+}
+
+.title {
+  @apply max-w-[555px];
+  @apply font-medium text-[26px]/[38px] -tracking-[0.0004em] text-center text-white;
+  @apply tablet:text-[32px];
+}
+
+.list {
+  @apply w-full;
+  @apply flex flex-col justify-start items-center gap-[10px];
+
+  &:first-of-type {
+    @apply tablet:grid grid-cols-[35%_65%];
+  }
+
+  &:last-of-type {
+    @apply tablet:grid grid-cols-[65%_35%];
+  }
+}
+
+.itemWrapper {
+  @apply h-[400px];
+  @apply w-full;
+  @apply relative;
+  @apply rounded-[10px];
+  @apply overflow-hidden;
+
+  &.threeD {
+    @apply border border-white/15;
+  }
+
+  &.dashboard {
+    background: linear-gradient(180deg, #000000 0%, #371866 100%);
+  }
+}
+
+.itemInfo {
+  @apply absolute top-[270px] left-[20px] right-[20px];
+  @apply flex flex-col justify-start items-start gap-[14px];
+  @apply desktop:gap-[10px];
+}
+
+.itemInfoTitle {
+  @apply font-medium text-[16px]/[31px] -tracking-[0.0001em] text-white;
+}
+
+.itemInfoDescription {
+  @apply font-normal text-[16px]/[26px] -tracking-[0.0001em] text-white/70;
+}
+
+.itemIllustration {
+  .threeD & {
+    @apply absolute bottom-[152px] left-[50%] transform -translate-x-1/2;
+    @apply w-auto max-w-[76%] max-h-[-webkit-fill-available];
+  }
+
+  .dashboard & {
+    @apply h-full;
+    @apply object-cover object-[top_left];
+    @apply rounded-[10px];
+  }
+}
