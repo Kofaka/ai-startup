@@ -1,11 +1,11 @@
 .root {
   @apply pt-[90px] px-[15px] pb-0 h-full;
   @apply flex flex-col justify-between items-center gap-0;
-  @apply bg-[url('./heroshot-bg-image_mobile.png')] bg-black bg-contain bg-bottom bg-no-repeat;
+  @apply bg-[url('./images/heroshot-bg-image_mobile.png')] bg-black bg-contain bg-bottom bg-no-repeat;
   @apply tablet:px-[65px];
-  @apply tablet:bg-[url('./heroshot-bg-image_tablet.png')] tablet:bg-cover tablet:bg-top;
+  @apply tablet:bg-[url('./images/heroshot-bg-image_tablet.png')] tablet:bg-cover tablet:bg-top;
   @apply desktop:px-[40px];
-  @apply desktop:bg-[url('./heroshot-bg-image_desktop.png')];
+  @apply desktop:bg-[url('./images/heroshot-bg-image_desktop.png')];
 
   mask: linear-gradient(0deg, rgb(0 0 0 / 0%) 3.8%, #050208 21.74%);
 }
