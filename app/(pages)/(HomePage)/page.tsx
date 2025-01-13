@@ -1,5 +1,5 @@
 // Components
-import { Heroshot, Companies, Bento } from '@/app/(pages)/(HomePage)/components';
+import { Heroshot, Companies, Bento, Features } from '@/app/(pages)/(HomePage)/components';
 // Styles
 import styles from './HomePage.module.scss';
 
@@ -9,6 +9,7 @@ export default function Home() {
       <Heroshot />
       <Companies />
       <Bento />
+      <Features />
     </div>
   );
 }
