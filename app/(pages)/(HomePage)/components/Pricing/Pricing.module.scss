@@ -1,0 +1,51 @@
+.root {
+  @apply p-[14px_40px];
+  @apply tablet:p-[14px];
+
+  background: radial-gradient(
+      circle,
+      rgb(0 0 0 / 40%) 0%,
+      rgb(102 0 153 / 5%) 19%,
+      rgb(0 0 0 / 100%) 50%
+  );
+
+  @media screen and (width >= 810px) {
+    background: radial-gradient(
+        circle,
+        rgb(0 0 0 / 60%) 0%,
+        rgb(102 0 153 / 25%) 19%,
+        rgb(0 0 0 / 100%) 50%
+    );
+  }
+}
+
+.title {
+  @apply mb-[10px];
+  @apply text-[26px] font-medium -tracking-[0.015em] text-white text-center;
+  @apply tablet:mb-[30px];
+  @apply tablet:text-[56px]/[65px];
+}
+
+.description {
+  @apply mx-auto mb-[14px] max-w-[433px];
+  @apply text-[18px]/[31px] font-normal -tracking-[0.0001em] text-white text-center;
+  @apply tablet:mb-[28px];
+  @apply tablet:text-[20px];
+}
+
+.toggleWrapper {
+  @apply mb-[66px];
+  @apply flex justify-center items-center;
+  @apply tablet:mb-[52px];
+}
+
+.optionsList {
+  @apply mx-auto;
+  @apply flex flex-col justify-center items-center gap-[10px];
+  @apply tablet:flex-row;
+}
+
+.optionsListItem {
+  @apply w-[253px] h-[500px];
+  @apply desktop:w-[307px];
+}

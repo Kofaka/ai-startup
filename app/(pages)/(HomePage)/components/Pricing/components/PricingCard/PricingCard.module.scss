@@ -1,0 +1,40 @@
+.root {
+  @apply p-[20px];
+  @apply flex flex-col justify-stretch items-stretch gap-[20px];
+  @apply bg-[rgba(0,0,0,0.06)] border border-white/15 rounded-[10px];
+
+  &.active {
+    @apply border-0;
+    @apply bg-[url(./images/pattern.png)] bg-cover bg-opacity-[0.3];
+
+    box-shadow: 0 10px 74px 10px rgb(78 0 191 / 41%);
+  }
+}
+
+.header {
+  @apply pb-[20px];
+  @apply flex flex-col justify-start items-start gap-[6px];
+  @apply border-b border-[#282729];
+}
+
+.title {
+  @apply text-[24px]/[31px] font-medium -tracking-[0.0004em] text-white;
+}
+
+.price {
+  @apply text-[16px]/[26px] font-normal -tracking-[0.0001em] text-white/70;
+}
+
+.body {
+  @apply flex flex-col justify-between items-stretch gap-[10px];
+  @apply flex-grow;
+}
+
+.optionsListItem {
+  @apply py-[5px];
+  @apply flex justify-start items-center gap-x-[5px];
+}
+
+.optionsListItemIcon {
+  @apply w-[15px] h-[15px];
+}
