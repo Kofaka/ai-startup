@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-
 // Ui
 import { Toggle } from '@/app/ui';
 // Components
