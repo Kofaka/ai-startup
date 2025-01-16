@@ -1,0 +1,44 @@
+.root {
+  @apply border border-white/15;
+
+  background: linear-gradient(107.08deg, #190d2e 0.54%, #020103 99.46%);
+}
+
+.wrapper {
+  @apply mx-auto p-[76px_16px_76px_50px] max-w-[1200px];
+  @apply flex flex-col justify-start items-stretch gap-y-8;
+  @apply tablet:p-[76px_50px];
+}
+
+.title {
+  @apply max-w-[354px];
+  @apply text-[26px] font-medium -tracking-[0.015em] text-white;
+  @apply tablet:text-[56px]/[65px];
+}
+
+.list {
+  @apply w-full;
+  @apply flex flex-wrap flex-col justify-start items-stretch gap-x-[60px] gap-y-[40px];
+  @apply tablet:max-h-[630px];
+  @apply desktop:max-h-[370px];
+}
+
+.listItem {
+  @apply w-full;
+  @apply flex flex-col justify-start items-start gap-[10px];
+  @apply tablet:w-[calc(50%-30px)];
+  @apply desktop:w-[calc(33.33%-30px)];
+}
+
+.listItemTitle {
+  @apply flex flex-row justify-start items-center gap-[5px];
+  @apply text-[16px]/[31px] font-medium -tracking-[0.0001em] text-white;
+}
+
+.listItemIcon {
+  @apply w-[16px] h-[16px];
+}
+
+.listItemDescription {
+  @apply text-[16px]/[26px] font-normal -tracking-[0.0001em] text-white/70;
+}

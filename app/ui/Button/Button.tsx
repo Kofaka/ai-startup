@@ -14,13 +14,19 @@ export enum ButtonColor {
   White = 'white',
 }
 
-export interface ButtonProps extends ComponentPropsWithoutRef<"button"> {
+export type ButtonProps = ComponentPropsWithoutRef<'button'> & {
   color?: ButtonColor;
   size?: UIComponentSize;
   fullWidth?: boolean;
   outerBorder?: boolean;
   isLoading?: boolean;
-}
+} & ({
+  outerBorder?: boolean;
+  outerBorderBold?: never;
+} | {
+  outerBorder?: never;
+  outerBorderBold?: boolean;
+});
 
 type Ref = HTMLButtonElement;
 
@@ -30,6 +36,7 @@ export const Button = forwardRef<Ref, ButtonProps>((props, ref) => {
     size = UIComponentSize.Medium,
     fullWidth,
     outerBorder,
+    outerBorderBold,
     isLoading,
     disabled,
     className,
@@ -43,6 +50,7 @@ export const Button = forwardRef<Ref, ButtonProps>((props, ref) => {
       className={clsx(styles.root, styles[color], styles[size], {
         [styles.fullWidth]: fullWidth,
         [styles.outerBorder]: outerBorder,
+        [styles.outerBorderBold]: outerBorderBold,
         [styles.loading]: isLoading,
       }, className)}
       disabled={disabled || isLoading}

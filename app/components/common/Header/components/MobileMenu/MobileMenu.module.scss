@@ -5,7 +5,7 @@
 }
 
 .button {
-  @apply p-[7px];
+  @apply p-[4px];
   @apply rounded-[10px];
   @apply bg-transparent;
   @apply border border-white border-opacity-0;
@@ -23,9 +23,10 @@
 }
 
 .menu {
-  @apply absolute inset-0 py-4 px-[17px] mt-[77px] w-screen;
+  // 68px is the height of the mobile header
+  @apply absolute inset-0 py-4 px-[17px] mt-[68px] w-screen;
   // stylelint-disable-next-line
-  @apply h-[calc(100vh-77px)];
+  @apply h-[calc(100vh-68px)];
   @apply flex flex-col justify-start items-stretch gap-3;
   @apply bg-[url('/stars-glow.png')] bg-black bg-cover bg-top bg-no-repeat;
   @apply shadow-lg ring-1 ring-brand-300/50;

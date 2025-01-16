@@ -1,0 +1,35 @@
+.root {
+  @apply flex items-center gap-[6px];
+  @apply cursor-pointer select-none;
+}
+
+.input {
+  @apply sr-only;
+}
+
+.slider {
+  @apply relative;
+  @apply w-[33px] h-[20px];
+  @apply rounded-full bg-gray-400;
+  @apply transition-colors duration-300;
+
+  &::after {
+    @apply absolute;
+    @apply content-[''];
+    @apply w-[16px] h-[16px] top-[2px] left-[2px];
+    @apply bg-white rounded-full;
+    @apply transition transform duration-300;
+  }
+
+  input:checked + & {
+    @apply bg-[#8c45ff];
+
+    &::after {
+      @apply translate-x-[13px];
+    }
+  }
+}
+
+.label {
+  @apply text-gray-300 text-sm font-medium;
+}
