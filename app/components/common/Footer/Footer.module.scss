@@ -3,11 +3,6 @@
   @apply flex flex-row flex-wrap justify-between items-center gap-x-2 gap-y-[30px];
   @apply border-t border-white/15;
 
-  box-shadow:
-    -50px -64px 140px rgb(0 0 0 / 50%),
-    -20px -64px 140px rgb(0 0 0 / 90%),
-    50px -64px 140px rgb(0 0 0 / 50%);
-
   @media screen and (width >= 810px) {
     @apply grid items-start gap-[30px];
 
