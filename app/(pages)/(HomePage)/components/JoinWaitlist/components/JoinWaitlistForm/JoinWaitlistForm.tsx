@@ -115,7 +115,7 @@ export const JoinWaitlistForm = () => {
       )}
 
       <Button
-        className={styles.cta2}
+        className={styles.cta}
         color={ButtonColor.White}
         size={UIComponentSize.Large}
         type="submit"

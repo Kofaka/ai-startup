@@ -32,10 +32,6 @@
 }
 
 .cta {
-  @apply w-full p-4 bg-white border border-gray-300 rounded-md;
-}
-
-.cta2 {
   @apply relative;
   @apply tablet:absolute tablet:top-[4.5px] tablet:right-[4.5px] tablet:bottom-0;
 }

@@ -17,7 +17,7 @@
 
 .formWrapper {
   @apply mb-[34px] w-full max-w-[272px];
-  @apply tablet:mb-[26px];
+  @apply tablet:mb-[26px] tablet:max-w-[403px];
 }
 
 .notice {
