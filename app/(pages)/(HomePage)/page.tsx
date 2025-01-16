@@ -5,7 +5,8 @@ import {
   Bento,
   Features,
   Clients,
-  Pricing
+  Pricing,
+  JoinWaitlist
 } from '@/app/(pages)/(HomePage)/components';
 // Styles
 import styles from './HomePage.module.scss';
@@ -18,7 +19,8 @@ export default function Home() {
       <Bento />
       <Features />
       <Clients />
-      <Pricing/>
+      <Pricing />
+      <JoinWaitlist />
     </div>
   );
 }
